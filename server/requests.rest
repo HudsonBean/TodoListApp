@@ -1,0 +1,14 @@
+GET http://localhost:8080/dev
+
+###
+
+GET http://localhost:8080/todos
+
+###
+
+POST http://localhost:8080/todos/new
+Content-Type: application/json
+
+{
+    "todo": "Get bread at the store."
+}
