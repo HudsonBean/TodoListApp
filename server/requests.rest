@@ -12,3 +12,7 @@ Content-Type: application/json
 {
     "todo": "Get bread at the store."
 }
+
+###
+
+GET http://localhost:8080/todos/64c03804f436e214e1828c99

@@ -54,3 +54,9 @@ app.post("/todos/new", (req, res) => {
   //Response
   res.status(201).json(data);
 });
+app.get("/todos/:id", async (req, res) => {
+  //Get data
+  const data = await todos.findOne({ _id: req.params.id });
+  //Response
+  res.status(202).json(data);
+});
