@@ -34,11 +34,43 @@ body {
     }
     .list {
       width: 25rem;
-      height: 32.5rem;
-      background-color: rgba(50, 50, 50, 0.03);
+      height: 30rem;
+      background-color: rgba(50, 50, 50, 0.05);
       border-radius: 10px;
       display: flex;
       justify-content: center;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      ul {
+        width: 100%;
+        list-style: none;
+        li {
+          user-select: none;
+          $margin: 0.35rem;
+          $padding: 0.5rem;
+          width: 90%;
+          height: 2.5rem;
+          margin: $margin 0 $margin 0;
+          background-color: rgb(50, 50, 50);
+          border-radius: 15px;
+          padding: 0 $padding 0 $padding;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 2.5px solid rgb(50, 50, 50);
+          .todo {
+            flex: 1;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+          }
+          &:hover {
+            background-color: white;
+            color: black;
+            border: 2.5px solid black;
+          }
+        }
+      }
     }
   }
 }

@@ -37,9 +37,41 @@ body {
 }
 .container .todo-list .list {
   width: 25rem;
-  height: 32.5rem;
-  background-color: rgba(50, 50, 50, 0.03);
+  height: 30rem;
+  background-color: rgba(50, 50, 50, 0.05);
   border-radius: 10px;
   display: flex;
   justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.container .todo-list .list ul {
+  width: 100%;
+  list-style: none;
+}
+.container .todo-list .list ul li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 90%;
+  height: 2.5rem;
+  margin: 0.35rem 0 0.35rem 0;
+  background-color: rgb(50, 50, 50);
+  border-radius: 15px;
+  padding: 0 0.5rem 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2.5px solid rgb(50, 50, 50);
+}
+.container .todo-list .list ul li .todo {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+.container .todo-list .list ul li:hover {
+  background-color: white;
+  color: black;
+  border: 2.5px solid black;
 }/*# sourceMappingURL=App.css.map */

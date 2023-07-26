@@ -16,7 +16,12 @@ function App() {
         <div className="list">
           <ul>
             {todos.map((todo) => (
-              <li key={todo._id}>{todo.todo}</li>
+              <li key={todo._id}>
+                <span className="todo">{todo.todo}</span>
+                <span class="material-symbols-outlined">
+                  check_box_outline_blank
+                </span>
+              </li>
             ))}
           </ul>
         </div>
