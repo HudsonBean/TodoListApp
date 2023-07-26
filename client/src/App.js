@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./styles/App.css";
-import { Todos } from "./modules/Todos";
 
 function App() {
+  const [todos, setTodos] = useState([]);
+  useEffect(() => {
+    fetch("/todos")
+      .then((res) => res.json())
+      .then((data) => setTodos(data))
+      .catch(console.error);
+  }, []);
   return (
     <div className="container">
       <div className="todo-list">
         <h2>Todo List</h2>
         <div className="list">
-          <Todos />
+          <ul>
+            {todos.map((todo) => (
+              <li key={todo._id}>{todo.todo}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
